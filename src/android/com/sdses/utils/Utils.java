@@ -16,8 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.realidfarm.alsfarm.R;
-
+import com.realidfarm.alsfarmlite.R;
 
 public class Utils {
 	private static Utils utils;
