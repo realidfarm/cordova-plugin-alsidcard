@@ -1,0 +1,27 @@
+{
+  "name": "cordova-plugin-alsidcard",
+  "version": "0.0.1",
+  "description": "Cordova alsidcard Plugin",
+  "cordova": {
+    "id": "cordova-plugin-alsidcard",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realidfarm/cordova-plugin-alsidcard.git"
+  },
+  "keywords": [
+    "cordova",
+    "alsidcard",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Alex.Tao",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/realidfarm/cordova-plugin-alsidcard/issues"
+  },
+  "homepage": "https://github.com/realidfarm/cordova-plugin-alsidcard#readme"
+}
