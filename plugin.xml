@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin id="cordova-plugin-alsidcard" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>alsidcard</name>
+    <description>Cordova alsidcard Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,alsidcard</keywords>
+
+    <js-module name="idcard" src="www/idcard.js">
+        <clobbers target="idcard" />
+    </js-module>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="IdCard">
+                <param name="android-package" value="com.realidfarm.idcard.IdCard" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+            <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+            <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+            <uses-permission android:name="android.permission.VIBRATE" />
+            <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+            <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+            <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_WIMAX_STATE" />
+            <uses-permission android:name="android.permission.CHANGE_WIMAX_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+            <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
+            <uses-permission android:name="android.permission.BATTERY_STATS" />
+            <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+            <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+            <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+            <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        </config-file>
+        
+        <source-file src="src/android/IdCard.java" target-dir="src/com/realidfarm/idcard" />
+
+        <source-file src="src/android/com/sdses/bean/ID2PicNoLic.java" target-dir="src/com/sdses/bean" />
+        <source-file src="src/android/com/sdses/beanmy/ID2Data.java" target-dir="src/com/sdses/beanmy" />
+        <source-file src="src/android/com/sdses/readcardservice/IReadCardService.aidl" target-dir="src/com/sdses/readcardservice" />
+        <source-file src="src/android/com/sdses/readcardservice/readCardConstants.java" target-dir="src/com/sdses/readcardservice" />
+        <source-file src="src/android/com/sdses/utils/AppConstant.java" target-dir="src/com/sdses/utils" />
+        <source-file src="src/android/com/sdses/utils/Utils.java" target-dir="src/com/sdses/utils" />
+        <source-file src="src/android/com/sdses/values/ClientVars.java" target-dir="src/com/sdses/values" />
+		
+        <source-file src="src/android/AS60x_SDK.jar" target-dir="libs" />
+        <source-file src="src/android/SDSES_GPIOControl_1.0.jar" target-dir="libs" />
+        <source-file src="src/android/SDSES_WltNoLic_1.2.jar" target-dir="libs" />
+        <source-file src="src/android/SSPfinger-1.17.jar" target-dir="libs" />
+        <source-file src="src/android/support-annotations-23.1.1-sources.jar" target-dir="libs" />
+        <source-file src="src/android/support-v4-23.1.1-sources.jar" target-dir="libs" />
+
+        <source-file src="src/android/armeabi/libfingerprint.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/armeabi/libFpQualityEmbed_jni.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/armeabi/libSDSES_GPIOControl_1.0.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/armeabi/libSDSES_SerialPort_1.1.so" target-dir="libs/armeabi" />
+        <source-file src="src/android/armeabi/libSDSES_Wlt_1.2.so" target-dir="libs/armeabi" />
+
+        <source-file src="src/android/armeabi/libfingerprint.so" target-dir="libs/armeabi-v7a" />
+        <source-file src="src/android/armeabi/libFpQualityEmbed_jni.so" target-dir="libs/armeabi-v7a" />
+        <source-file src="src/android/armeabi/libSDSES_GPIOControl_1.0.so" target-dir="libs/armeabi-v7a" />
+        <source-file src="src/android/armeabi/libSDSES_SerialPort_1.1.so" target-dir="libs/armeabi-v7a" />
+        <source-file src="src/android/armeabi/libSDSES_Wlt_1.2.so" target-dir="libs/armeabi-v7a" />
+    </platform>
+</plugin>
