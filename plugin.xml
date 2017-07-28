@@ -50,8 +50,6 @@
         <source-file src="src/android/com/sdses/beanmy/ID2Data.java" target-dir="src/com/sdses/beanmy" />
         <source-file src="src/android/com/sdses/readcardservice/IReadCardService.aidl" target-dir="src/com/sdses/readcardservice" />
         <source-file src="src/android/com/sdses/readcardservice/readCardConstants.java" target-dir="src/com/sdses/readcardservice" />
-        <source-file src="src/android/com/sdses/utils/AppConstant.java" target-dir="src/com/sdses/utils" />
-        <source-file src="src/android/com/sdses/utils/Utils.java" target-dir="src/com/sdses/utils" />
         <source-file src="src/android/com/sdses/values/ClientVars.java" target-dir="src/com/sdses/values" />
 		
         <source-file src="src/android/AS60x_SDK.jar" target-dir="libs" />
